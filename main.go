@@ -1,6 +1,10 @@
 package main
 
-import "github.com/gomarkdown/markdown"
+import (
+	"bytes"
+
+	"github.com/yuin/goldmark"
+)
 
 // This calls a JS function from Go.
 func main() {}
@@ -13,7 +17,10 @@ func main() {}
 //export Modifier
 func Modifier(content string) string {
 	md := []byte(content)
-	output := markdown.ToHTML(md, nil, nil)
-	return string(output)
+	var buf bytes.Buffer
+	if err := goldmark.Convert(md, &buf); err != nil {
+		panic(err)
+	}
+	return string(buf.Bytes())
 
 }
