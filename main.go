@@ -22,6 +22,6 @@ func Modifier(content string) string {
 		panic(err)
 	}
 	println(content)
-	return string(buf.Bytes())
+	return "from golang!!"
 
 }
