@@ -21,6 +21,7 @@ func Modifier(content string) string {
 	if err := goldmark.Convert(md, &buf); err != nil {
 		panic(err)
 	}
+	println(content)
 	return string(buf.Bytes())
 
 }
