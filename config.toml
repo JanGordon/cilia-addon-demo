@@ -1,0 +1,4 @@
+OpeningToken = "{<"
+ClosingToken = ">}"
+Name = "addon-demo"
+PureSSR = false
