@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+	"fmt"
 
 	"github.com/yuin/goldmark"
 )
@@ -22,6 +23,7 @@ func Modifier(content string) string {
 		panic(err)
 	}
 	println(content)
+	fmt.Println("golang")
 	return "from golang!!"
 
 }
