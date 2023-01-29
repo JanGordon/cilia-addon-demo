@@ -3652,5 +3652,9 @@
   // main.js
   var import_showdown = __toESM(require_showdown());
   var converter = new import_showdown.default.Converter();
+  function modifier(content) {
+    return converter.makeHtml(content);
+  }
+  modifier("");
 })();
 /*! showdown v 2.1.0 - 21-04-2022 */
